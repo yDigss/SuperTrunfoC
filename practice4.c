@@ -1,14 +1,31 @@
 #include <stdio.h>
 
+#define LINHA 3
+#define COLUNA 3
+
 int main(){
 
-    int matriz[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int matriz[LINHA][COLUNA];
     int target = 7;
     int found = 0;
+    int soma = 1;
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < LINHA; i++)
     {
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < COLUNA; j++)
+        {
+            matriz[i][j] = soma;
+            soma++;
+            printf("%d ", matriz[i][j]);
+        }
+
+        printf("\n");
+
+    }
+
+    for (int i = 0; i < LINHA; i++)
+    {
+        for (int j = 0; j < COLUNA; j++)
         {
             if (matriz[i][j] == target)
             {
